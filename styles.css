@@ -21,7 +21,8 @@ html {
 
 /* Body styles */
 body {
-  font-family: 'Lobster', cursive;
+  font-family: 'Poppins', sans-serif;
+
   line-height: 1.6;
 }
 
@@ -156,7 +157,7 @@ section {
 }
 
 .card {
-  background: linear-gradient(45deg, #6a11cb, #2575fc); 
+  background: linear-gradient(45deg, #a758fc, #6395ec); 
   padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
