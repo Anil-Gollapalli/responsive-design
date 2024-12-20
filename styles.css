@@ -33,7 +33,7 @@ nav {
   align-items: center;
   background-color: #333;
   padding: 1rem;
-  background: linear-gradient(45deg, #6a11cb, #2575fc); /* A beautiful static gradient */
+  background: linear-gradient(45deg, #114fcb, #1b9034); /* A beautiful static gradient */
   padding: 10px; /* Adds spacing around content */
   border-radius: 2px; /* Smooth edges */
 }
@@ -157,7 +157,7 @@ section {
 }
 
 .card {
-  background: linear-gradient(45deg, #a758fc, #6395ec); 
+  background: linear-gradient(45deg, #114fcb, #1b9034); 
   padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
