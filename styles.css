@@ -5,9 +5,23 @@
   box-sizing: border-box;
 }
 
+html {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with invisible */
+  }
+  100% {
+    opacity: 1; /* End with full visibility */
+  }
+}
+
+
 /* Body styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Lobster', cursive;
   line-height: 1.6;
 }
 
@@ -18,6 +32,9 @@ nav {
   align-items: center;
   background-color: #333;
   padding: 1rem;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* A beautiful static gradient */
+  padding: 10px; /* Adds spacing around content */
+  border-radius: 2px; /* Smooth edges */
 }
 
 .logo-container {
@@ -28,24 +45,34 @@ nav {
   display: flex;
   flex-direction: column; /* Stack the spans vertically */
   margin-left: 10px; /* Add spacing between the image and text */
+  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .profile-img {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   margin-right: 10px;
 }
+
+/* .logo-text {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+} */
 
 .logo-text {
   color: white;
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Pacifico', cursive;
 }
 .profession {
   font-size: 12px;
   color: white;
   margin-top: 2px; /* Add spacing between the logo-text and profession */
+  font-family: 'Pacifico', cursive;
 }
 .toggle-btn {
   display: none;
@@ -62,6 +89,7 @@ nav {
   display: flex;
   justify-content: space-around;
   flex: 1;
+
 }
 
 .menu li {
@@ -72,10 +100,12 @@ nav {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .menu li a:hover {
   text-decoration: underline;
+  color: #ff5733;
 }
 
 /* Social icons styles */
@@ -95,10 +125,11 @@ ul.social-icons li a {
   color: white;
   font-size: 24px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 ul.social-icons li a:hover {
-  color: #0d6efd; /* Highlight color on hover */
+  color: #ff5733;
 }
 
 /* Section styles */
@@ -107,10 +138,10 @@ section {
   text-align: center;
 }
 
-/* Profile Section */
+/* Profile Section*/
 #profile {
   background-color: #fafcfc;
-}
+} 
 
 /* My Projects Section */
 #myprojects {
@@ -125,7 +156,7 @@ section {
 }
 
 .card {
-  background-color: #fff;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); 
   padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -230,5 +261,5 @@ section {
   }
 }
 #contact{
-  background-color: rgb(243, 243, 243);
+  background-color: #fafcfc;
 }
