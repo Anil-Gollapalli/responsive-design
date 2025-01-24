@@ -18,11 +18,9 @@ html {
   }
 }
 
-
 /* Body styles */
 body {
   font-family: 'Poppins', sans-serif;
-
   line-height: 1.6;
 }
 
@@ -57,12 +55,6 @@ nav {
   margin-right: 10px;
 }
 
-/* .logo-text {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-} */
-
 .logo-text {
   color: white;
   font-size: 20px;
@@ -90,7 +82,6 @@ nav {
   display: flex;
   justify-content: space-around;
   flex: 1;
-
 }
 
 .menu li {
@@ -141,7 +132,6 @@ ul.social-icons li a img {
 ul.social-icons li a:hover {
   color: #ff5733;
 }
-
 
 /* Section styles */
 section {
@@ -224,6 +214,38 @@ section {
   display: block;
 }
 
+/* Filter and Sort styles */
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.filter-select,
+.sort-button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #114fcb, #1b9034);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.filter-select:hover,
+.sort-button:hover {
+  background: linear-gradient(45deg, #1b9034, #114fcb);
+}
+
+.filter-select {
+  width: 150px;
+}
+
+.sort-button {
+  margin-left: 10px;
+}
+
 /* Responsive styles for smaller devices */
 @media (max-width: 768px) {
   nav {
@@ -270,8 +292,18 @@ section {
   .card-container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-}
-#contact{
-  background-color: #fafcfc;
+
+  .filter-sort {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
+#contact {
+  background-color: #fafcfc;
+}

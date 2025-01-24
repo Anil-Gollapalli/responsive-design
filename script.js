@@ -17,13 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuLinks = document.querySelectorAll('#menu a');
     const sections = document.querySelectorAll('section');
 
-    // Hide all sections initially
+    // Hide all sections initially except for Profile
     sections.forEach(section => section.style.display = 'none');
-
-    // Show the "Profile", "MyProjects", and "Contact" sections by default
     document.getElementById('profile').style.display = 'block';
-    document.getElementById('myprojects').style.display = 'block';
-    document.getElementById('contact').style.display = 'block';
 
     // Handle menu link clicks
     menuLinks.forEach(link => {
@@ -49,4 +45,35 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-}); 
+
+    // Filter and sort functionality
+    const filterSelect = document.getElementById('filter-select');
+    const sortButton = document.getElementById('sort-button');
+    const cards = document.querySelectorAll('.card');
+
+    // Filter projects based on category
+    filterSelect.addEventListener('change', () => {
+        const category = filterSelect.value;
+
+        cards.forEach(card => {
+            const cardCategory = card.dataset.category;
+
+            if (category === 'all' || category === cardCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+
+    // Sort projects by name (replace with actual date sorting as needed)
+    sortButton.addEventListener('click', () => {
+        const container = document.querySelector('.card-container');
+        const sortedCards = Array.from(cards).sort((a, b) => {
+            return a.querySelector('h3').innerText.localeCompare(b.querySelector('h3').innerText);
+        });
+
+        container.innerHTML = '';
+        sortedCards.forEach(card => container.appendChild(card));
+    });
+});

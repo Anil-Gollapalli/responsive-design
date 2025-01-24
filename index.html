@@ -47,10 +47,20 @@
     </section>
 <!-- My Projects Section -->
 <section id="myprojects">
+    <div class="filter-sort">
+        <select class="filter-select" id="filter-select">
+          <option value="all">All Projects</option>
+          <option value="HTML&CSS">HTML&CSS-projects</option>
+          <option value="javascript">JavaScript-projects</option>
+          <option value="react">React-projects</option>
+          <option value="nodejs">nodejs-projects</option>
+        </select>
+        <button class="sort-button" id="sort-button">Sort by Date</button>
+      </div>
     <h2>My Projects</h2>
     <div class="card-container">
         <!-- 12 Cards -->
-        <div class="card">
+        <div class="card" data-category="HTML&CSS">
             Signup_form
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -61,7 +71,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="HTML&CSS">
             Admin_Dashboard
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -72,7 +82,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Library
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -83,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Tic-tac-toe
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -94,7 +104,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Todolist
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -105,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             weather-app
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -116,7 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             restaurant-project
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -127,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Recursion
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -138,7 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Linked-list
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -149,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Binary-search-tree
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -160,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             HashMap
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -171,7 +181,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Knight-travails
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -182,7 +192,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Testing-practice
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -193,7 +203,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="javascript">
             Battleship
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -204,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="react">
             CV-application
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -215,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="react">
             Memory-card 
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -226,7 +236,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="react">
             Shopping-cart 
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
@@ -237,7 +247,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" data-category="nodejs">
             Basic Information site 
             <div class="dropdown">
                 <button id="dots-button" class="fa fa-ellipsis-v" style="font-size: 1.2rem;"></button>
